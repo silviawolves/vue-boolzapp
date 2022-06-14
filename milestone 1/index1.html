@@ -7,8 +7,8 @@
     <title>Boolzapp</title>
 
     <!--CSS + BOOTSTRAP-->
-    <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
     <!--FONTAWESOM-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!--VUEJS-->
@@ -85,19 +85,38 @@
                             </li>
                         </ul>
 
-
                     </div>
-
-
-
-
                 </div>
 
                             <!--main page con messaggi-->
                 <div class="main-box flex-grow-1 d-flex flex-column overflow-hidden">
 
-                    <div class="contatto-corrente flex-shrink-0"></div>
+                            <!--topbar dettagli contatto corrente-->
+                    <div class="contatto-corrente flex-shrink-0 d-flex align-items-center">
+
+                        <div class="immagine align-middle">
+                            <img src="../img/avatar_1.jpg" alt="avatar michele" class="avatar">
+                        </div>
+
+                        <div class="contenuto-utente flex-grow-1 align-middle">
+                            <p class="nome-utente m-0"><small>Michele</small></p>
+                            <p class="messaggio-utente m-0">Ultimo accesso oggi alle 12:00</p>
+                        </div>
+
+                        <div class="icone-sidebar pe-3">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                        
+                    </div>
+
+
+
+                            <!--contenitore chat-->
                     <div class="chat flex-grow-1"></div>
+
+                            <!--lowbar digitazione testo-->
                     <div class="bar-digitazione flex-shrink-0"></div>
 
                 </div>
