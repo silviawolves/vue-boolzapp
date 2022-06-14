@@ -33,7 +33,6 @@ body {
 
 .utente, .contatto-corrente, .bar-digitazione {
     height: 55px;
-    border: 1px dashed rosybrown;
 }
 
 /* AVATAR MITTENTE */
@@ -82,8 +81,29 @@ body {
 /* RICERCA */
 .ricerca {
     height: 45px;
-    border: 1px dashed rosybrown;
+    background-color: #FAFAFA;
 }
+
+.barra-ricerca {
+    height: 30px;
+}
+
+.barra-ricerca span, .barra-ricerca input {
+    border: 1px solid #eaeaea;
+    background-color: white;
+}
+
+::placeholder {
+    font-size: .8rem;
+    vertical-align: middle;
+}
+
+.barra-ricerca i {
+    color: var(--icon-grey);
+}
+
+
+
 
 .contatti {
     border: 1px dashed rosybrown;
