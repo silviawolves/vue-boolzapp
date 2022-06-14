@@ -22,11 +22,9 @@
                             <!--main container dell'app-->
             <div class="container d-flex overflow-hidden p-0">
         
-
                             <!--sidebar contatti-->
                 <div class="sidebar flex-shrink-0 d-flex flex-column overflow-hidden">
                     
-
                             <!--mittente / utente attivo-->
                     <div class="utente flex-shrink-0 d-flex align-items-center justify-content-between">
 
@@ -40,7 +38,6 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
-
 
                             <!--alert notifiche azzurro-->
                     <div class="notifiche flex-shrink-0 p-0 d-flex align-items-center">
@@ -69,18 +66,18 @@
                     <div class="contatti flex-grow-1">
 
                         <ul class="list-unstyled mb-0">
-                            <li class="d-flex border-top">
+                            <li class="d-flex border-top" v-for="(user, i) in arrayContatti">
                                 <div class="immagine-utente">
-                                    <img src="../img/avatar_1.jpg" alt="avatar michele">
+                                    <img :src="'../img/avatar' + user.avatar + '.jpg'" alt="avatar michele">
                                 </div>
         
                                 <div class="contenuto-utente flex-grow-1">
-                                    <p class="nome-utente mb-0">Michele</p>
+                                    <p class="nome-utente mb-0">{{user.name}}</p>
                                     <p class="messaggio-utente ms-2">Ultimo messaggio inviato</p>
                                 </div>
         
                                 <div class="orario">
-                                    12.00
+                                    12:00
                                 </div>
                             </li>
                         </ul>
@@ -110,8 +107,6 @@
                         </div>
                         
                     </div>
-
-
 
                             <!--contenitore chat-->
                     <div class="chat flex-grow-1">
@@ -143,8 +138,6 @@
                         </div>
 
                     </div>
-
-
 
                             <!--lowbar digitazione testo-->
                     <div class="bar-digitazione flex-shrink-0 d-flex gap-4 align-items-center justify-content-center">
