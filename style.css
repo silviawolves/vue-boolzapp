@@ -5,8 +5,9 @@ body {
     --icon-grey: #B1B1B1;
     --icon-darkgrey: #6B7376;
     --light-blue: #8EDAFD;
-    --sidebar-margin: .5rem;
+    --zerofive-margin: .5rem;
     --low-bar-bg: #F3EEEA;
+    --mit-message: #D5F9BA;
 }
 
 .top-body {
@@ -42,8 +43,8 @@ body {
 .avatar {
     height: 40px;
     border-radius: 50%;
-    margin-left: var(--sidebar-margin);
-    margin-right: var(--sidebar-margin);
+    margin-left: var(--zerofive-margin);
+    margin-right: var(--zerofive-margin);
 }
 
 .avatar + span {
@@ -66,7 +67,7 @@ body {
     background-color: white;
     border-radius: 50%;
     padding: .6rem .5rem;
-    margin-left: var(--sidebar-margin);
+    margin-left: var(--zerofive-margin);
 }
 
 .testo-notifiche {
@@ -105,13 +106,13 @@ body {
 
 .immagine-utente img {
     height: 45px;
-    margin: var(--sidebar-margin);
+    margin: var(--zerofive-margin);
     border-radius: 50%;
 }
 
 .nome-utente {
     font-size: .9rem;
-    margin: var(--sidebar-margin);
+    margin: var(--zerofive-margin);
 }
 
 .messaggio-utente, .orario {
@@ -121,7 +122,7 @@ body {
 }
 
 .orario {
-    margin: var(--sidebar-margin);
+    margin: var(--zerofive-margin);
 }
 
 /***********************************
@@ -134,6 +135,30 @@ body {
 .chat {
     overflow: auto;
     background-image: url(img/mine.jpg);
+    padding: 3rem 4rem;
+}
+
+.messaggio-chat {
+    height: 45px;
+    width: 250px;
+    border-radius: 10px;
+    font-size: .8rem;
+    margin-bottom: var(--zerofive-margin);
+}
+
+.mittente p:last-of-type, .ricevente p:last-of-type {
+    font-size: .5rem;
+    opacity: 50%;
+    margin-right: var(--zerofive-margin);
+    margin-top: .2rem;
+}
+
+.mittente {
+    background-color: var(--mit-message);
+}
+
+.ricevente {
+    background-color: white;
 }
 
 /*LOWBAR*/
