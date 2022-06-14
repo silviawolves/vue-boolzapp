@@ -19,12 +19,12 @@
     <div class="top-body"></div>
 
         <div id="app">      <!--main container dell'app-->
-            <div class="container d-flex overflow-hidden">
+            <div class="container d-flex overflow-hidden p-0">
         
                             <!--sidebar contatti-->
                 <div class="sidebar flex-shrink-0 d-flex flex-column overflow-hidden">
                     
-                            <!--mittente: utente attivo-->
+                            <!--mittente / utente attivo-->
                     <div class="utente flex-shrink-0 d-flex align-items-center justify-content-between">
 
                         <div class="immagine">
@@ -36,13 +36,26 @@
                             <i class="fa-solid fa-message"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
+                    </div>
+
+                            <!--alert notifiche azzurro-->
+                    <div class="notifiche flex-shrink-0 p-0 d-flex align-items-center">
+
+                        <div class="icona-notifiche">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                        <div class="testo-notifiche ps-1">
+                            <p class="mb-0">Ricevi notifiche di nuovi messaggi</p>
+                            <a href="javascript:void(0)" class="text-muted opacity-50">Attiva notifiche desktop</a>
+                        </div>
+                        
+
 
                     </div>
 
 
 
-                    
-                    <div class="notifiche flex-shrink-0"></div>
+
                     <div class="ricerca flex-shrink-0"></div>
                     <div class="contatti flex-grow-1"></div>
 

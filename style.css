@@ -3,6 +3,8 @@ body {
     --top-green: #009688;
     --container-white: #EAEAEA;
     --icon-grey: #B1B1B1;
+    --light-blue: #8EDAFD;
+    --sidebar-margin: .5rem;
 }
 
 .top-body {
@@ -29,9 +31,16 @@ body {
     border-right: 1px solid lightgray;
 }
 
+.utente, .contatto-corrente, .bar-digitazione {
+    height: 55px;
+    border: 1px dashed rosybrown;
+}
+
+/* AVATAR MITTENTE */
 .avatar {
     height: 40px;
     border-radius: 50%;
+    margin-left: var(--sidebar-margin)
 }
 
 .avatar + span {
@@ -44,16 +53,33 @@ body {
     padding: 0 .2rem;
 }
 
-.utente, .contatto-corrente, .bar-digitazione {
-    height: 55px;
-    border: 1px dashed rosybrown;
-}
-
+/* NOTIFICHE */
 .notifiche {
     height: 65px;
-    border: 1px dashed rosybrown;
+    background-color: var(--light-blue);
 }
 
+/* .icona-notifiche {
+    background-color: white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+} */
+
+.icona-notifiche i {
+    color: var(--light-blue);
+    background-color: white;
+    border-radius: 50%;
+    padding: .6rem .5rem;
+    margin-left: var(--sidebar-margin);
+}
+
+.testo-notifiche {
+    font-size: .8rem;
+}
+
+/* RICERCA */
 .ricerca {
     height: 45px;
     border: 1px dashed rosybrown;
