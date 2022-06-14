@@ -33,6 +33,17 @@ body {
 .sidebar {
     min-width: 350px;
     border-right: 1px solid lightgray;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.utente {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .utente, .contatto-corrente, .bar-digitazione {
@@ -51,7 +62,11 @@ body {
     font-size: .8rem;
 }
 
-.icone-sidebar i {
+.icone-sidebar {
+    padding-right: 1rem;
+}
+
+.icone-sidebar i, .icone-topbar i {
     color: var(--icon-grey);
     padding: 0 .2rem;
 }
@@ -60,6 +75,10 @@ body {
 .notifiche {
     height: 65px;
     background-color: var(--light-blue);
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    padding: 0;
 }
 
 .icona-notifiche i {
@@ -72,12 +91,16 @@ body {
 
 .testo-notifiche {
     font-size: .8rem;
+    padding-left: 0.25rem;
 }
 
 /* RICERCA */
 .ricerca {
     height: 45px;
     background-color: #FAFAFA;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
 }
 
 .barra-ricerca {
@@ -102,6 +125,7 @@ body {
 .contatti {
     overflow: auto;
     background-color: white;
+    flex-grow: 1;
 }
 
 .immagine-utente img {
@@ -113,6 +137,11 @@ body {
 .nome-utente {
     font-size: .9rem;
     margin: var(--zerofive-margin);
+    margin-bottom: 0;
+}
+
+.messaggio-utente {
+    margin-left: var(--zerofive-margin);
 }
 
 .messaggio-utente, .orario {
@@ -129,13 +158,22 @@ body {
 ********* CHAT CONTAINER ***********/
 
 /*TOPBAR*/
+.contatto-corrente {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
 
+.icone-topbar {
+    padding-right: 1rem;
+}
 
 /*CHAT CONTAINER*/
 .chat {
     overflow: auto;
     background-image: url(img/mine.jpg);
     padding: 3rem 4rem;
+    flex-grow: 1;
 }
 
 .messaggio-chat {
@@ -164,6 +202,11 @@ body {
 /*LOWBAR*/
 .bar-digitazione {
     background-color: var(--low-bar-bg);
+    flex-shrink: 0;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .bar-digitazione i {

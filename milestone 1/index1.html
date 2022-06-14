@@ -23,16 +23,16 @@
             <div class="container d-flex overflow-hidden p-0">
         
                             <!--sidebar contatti-->
-                <div class="sidebar flex-shrink-0 d-flex flex-column overflow-hidden">
+                <div class="sidebar">
                     
                             <!--mittente / utente attivo-->
-                    <div class="utente flex-shrink-0 d-flex align-items-center justify-content-between">
+                    <div class="utente">
 
                         <div class="immagine">
                             <img src="../img/avatar_io.jpg" alt="avatar mittente" class="avatar"> <span>Sofia</span>
                         </div>
 
-                        <div class="icone-sidebar pe-3">
+                        <div class="icone-sidebar">
                             <i class="fa-solid fa-circle-notch"></i>
                             <i class="fa-solid fa-message"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -40,12 +40,12 @@
                     </div>
 
                             <!--alert notifiche azzurro-->
-                    <div class="notifiche flex-shrink-0 p-0 d-flex align-items-center">
+                    <div class="notifiche">
 
                         <div class="icona-notifiche">
                             <i class="fa-solid fa-bell-slash"></i>
                         </div>
-                        <div class="testo-notifiche ps-1">
+                        <div class="testo-notifiche">
                             <p class="mb-0">Ricevi notifiche di nuovi messaggi</p>
                             <a href="javascript:void(0)" class="text-muted opacity-50">Attiva notifiche desktop</a>
                         </div>
@@ -53,7 +53,7 @@
                     </div>
 
                             <!--barra di ricerca-->
-                    <div class="ricerca flex-shrink-0 d-flex align-items-center">
+                    <div class="ricerca">
 
                         <div class="input-group input-group-sm px-1 barra-ricerca">
                             <span class="input-group-text bg-white rounded-0" id="inputGroup-sizing-sm"><i class="fa-solid fa-magnifying-glass px-3"></i></span>
@@ -63,7 +63,7 @@
                     </div>
 
                             <!--contenitore contatti boolzapp-->
-                    <div class="contatti flex-grow-1">
+                    <div class="contatti">
 
                         <ul class="list-unstyled mb-0">
                             <li class="d-flex border-top" v-for="(user, i) in arrayContatti">
@@ -71,9 +71,9 @@
                                     <img :src="'../img/avatar' + user.avatar + '.jpg'" alt="avatar michele">
                                 </div>
         
-                                <div class="contenuto-utente flex-grow-1">
-                                    <p class="nome-utente mb-0">{{user.name}}</p>
-                                    <p class="messaggio-utente ms-2">Ultimo messaggio inviato</p>
+                                <div class="flex-grow-1">
+                                    <p class="nome-utente">{{user.name}}</p>
+                                    <p class="messaggio-utente">Ultimo messaggio inviato</p>
                                 </div>
         
                                 <div class="orario">
@@ -86,21 +86,21 @@
                 </div>
 
                             <!--main page con messaggi-->
-                <div class="main-box flex-grow-1 d-flex flex-column overflow-hidden">
+                <div class="flex-grow-1 d-flex flex-column overflow-hidden">
 
                             <!--topbar dettagli contatto corrente-->
-                    <div class="contatto-corrente flex-shrink-0 d-flex align-items-center">
+                    <div class="contatto-corrente">
 
-                        <div class="immagine align-middle">
+                        <div class="immagine">
                             <img src="../img/avatar_1.jpg" alt="avatar michele" class="avatar">
                         </div>
 
-                        <div class="contenuto-utente flex-grow-1 align-middle">
+                        <div class="flex-grow-1">
                             <p class="nome-utente m-0"><small>Michele</small></p>
                             <p class="messaggio-utente m-0">Ultimo accesso oggi alle 12:00</p>
                         </div>
 
-                        <div class="icone-sidebar pe-3">
+                        <div class="icone-topbar">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <i class="fa-solid fa-paperclip"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -109,7 +109,7 @@
                     </div>
 
                             <!--contenitore chat-->
-                    <div class="chat flex-grow-1">
+                    <div class="chat">
 
                         <div class="row flex-column">
 
@@ -140,7 +140,7 @@
                     </div>
 
                             <!--lowbar digitazione testo-->
-                    <div class="bar-digitazione flex-shrink-0 d-flex gap-4 align-items-center justify-content-center">
+                    <div class="bar-digitazione">
 
                         <i class="fa-regular fa-face-smile"></i>
                         <input type="text" placeholder="Scrivi un messaggio" class="w-75 mx-2">
