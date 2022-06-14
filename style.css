@@ -25,7 +25,8 @@ body {
     box-shadow: 0px 0px 10px -5px gray;
 }
 
-/********** SIDEBAR ***********/
+/****************************
+********* SIDEBAR ***********/
 .sidebar {
     min-width: 350px;
     border-right: 1px solid lightgray;
@@ -57,14 +58,6 @@ body {
     height: 65px;
     background-color: var(--light-blue);
 }
-
-/* .icona-notifiche {
-    background-color: white;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-} */
 
 .icona-notifiche i {
     color: var(--light-blue);
@@ -102,16 +95,38 @@ body {
     color: var(--icon-grey);
 }
 
-
-
-
+/* CONTATTI */
 .contatti {
-    border: 1px dashed rosybrown;
     overflow: auto;
+    background-color: white;
 }
 
+.immagine-utente img {
+    height: 45px;
+    margin: var(--sidebar-margin);
+    border-radius: 50%;
+}
+
+.nome-utente {
+    font-size: .9rem;
+    margin: var(--sidebar-margin);
+}
+
+.messaggio-utente, .orario {
+    font-size: .6rem;
+    opacity: 40%;
+    color: var(--bs-body-color-rgb);
+}
+
+.orario {
+    margin: var(--sidebar-margin);
+}
+
+
+
+/***********************************
+********* CHAT CONTAINER ***********/
 .chat {
-    border: 1px dashed rosybrown;
     overflow: auto;
     background-image: url(img/mine.jpg);
 }
