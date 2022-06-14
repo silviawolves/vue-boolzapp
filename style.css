@@ -2,6 +2,7 @@ body {
     --bs-body-bg: #dbdbd2;
     --top-green: #009688;
     --container-white: #EAEAEA;
+    --icon-grey: #B1B1B1;
 }
 
 .top-body {
@@ -20,4 +21,51 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     box-shadow: 0px 0px 10px -5px gray;
+}
+
+/********** SIDEBAR ***********/
+.sidebar {
+    min-width: 350px;
+    border-right: 1px solid lightgray;
+}
+
+.avatar {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.avatar + span {
+    font-size: .8rem;
+    padding-left: 5px;
+}
+
+.icone-sidebar i {
+    color: var(--icon-grey);
+    padding: 0 .2rem;
+}
+
+.utente, .contatto-corrente, .bar-digitazione {
+    height: 55px;
+    border: 1px dashed rosybrown;
+}
+
+.notifiche {
+    height: 65px;
+    border: 1px dashed rosybrown;
+}
+
+.ricerca {
+    height: 45px;
+    border: 1px dashed rosybrown;
+}
+
+.contatti {
+    border: 1px dashed rosybrown;
+    overflow: auto;
+}
+
+.chat {
+    border: 1px dashed rosybrown;
+    overflow: auto;
+    background-image: url(img/mine.jpg);
 }
