@@ -3,8 +3,10 @@ body {
     --top-green: #009688;
     --container-white: #EAEAEA;
     --icon-grey: #B1B1B1;
+    --icon-darkgrey: #6B7376;
     --light-blue: #8EDAFD;
     --sidebar-margin: .5rem;
+    --low-bar-bg: #F3EEEA;
 }
 
 .top-body {
@@ -87,7 +89,7 @@ body {
 }
 
 ::placeholder {
-    font-size: .8rem;
+    font-size: .7rem;
     vertical-align: middle;
 }
 
@@ -128,8 +130,26 @@ body {
 /*TOPBAR*/
 
 
-
+/*CHAT CONTAINER*/
 .chat {
     overflow: auto;
     background-image: url(img/mine.jpg);
+}
+
+/*LOWBAR*/
+.bar-digitazione {
+    background-color: var(--low-bar-bg);
+}
+
+.bar-digitazione i {
+    color: var(--icon-darkgrey);
+    font-size: 1.2rem;
+}
+
+.bar-digitazione input {
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    padding: 0 .5rem;
+    background-color: white;
+    height: 40px;
 }
