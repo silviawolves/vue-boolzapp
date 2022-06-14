@@ -1,0 +1,23 @@
+body {
+    --bs-body-bg: #dbdbd2;
+    --top-green: #009688;
+    --container-white: #EAEAEA;
+}
+
+.top-body {
+    background-color: var(--top-green);
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.container {
+    position: relative;
+    background-color: var(--container-white);
+    height: calc(100vh - 40px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px -5px gray;
+}
