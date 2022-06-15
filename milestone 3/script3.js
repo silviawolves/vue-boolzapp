@@ -170,25 +170,32 @@ new Vue({
         arrayContatti: contatti,
         utenteCorrente: contatti[0],
         newMessage: '',
+        randomReply: 'Ok.',
     },
     methods: {
-        contattoAttivo(utenteSelezionato){
+        contattoAttivo(utenteSelezionato) {
             this.utenteCorrente = utenteSelezionato;
             console.log(utenteSelezionato.name)
         },
-        keyEnter(){            
+        keyEnter() {            
             if (this.newMessage === "") {
                 return;
             } else {
                 this.utenteCorrente['messages'].push({date: this.getDate(), message: this.newMessage.trim(), status: 'sent'});
-                //this.utenteCorrente['messages'].push({status: 'received'})
             }
+
+            this.rispostaRandom()
             console.log(this.newMessage)
+
             this.newMessage = '';
         },
-        getDate(){
+        getDate() {
             const dataGiusta = new Date()
-            return dataGiusta.toLocaleString('it-IT', {day: "2-digit", month: "2-digit", year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', useGrouping: 'false'})
+            return dataGiusta.toLocaleString('it-IT', {day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit'})
+        },
+        rispostaRandom(randomReply) {
+            this.utenteCorrente['messages'].push({date: this.getDate(), message: this.randomReply, status: 'received'});
+            setTimeout(randomReply, 2000)
         }
     },
 })
