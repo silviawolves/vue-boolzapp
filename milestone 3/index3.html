@@ -114,9 +114,8 @@
                         <div class="row flex-column">
 
                             <div class="col-12" v-for="(user, i) in utenteCorrente.messages">
-                                <div class="messaggio-chat" :class="
-                                {'mittente' : user.status === 'sent', 
-                                'ricevente' : user.status === 'received', 'float-end' : user.status === 'sent', 
+                                <div class="messaggio-chat" :class="{'mittente' : user.status === 'sent',
+                                'ricevente' : user.status === 'received','float-end' : user.status === 'sent',
                                 'float-start' : user.status === 'received'}">
                                     <p class="testo-messaggio">{{user.message}}</p>
                                     <p class="orario-messaggio">{{user.date}}</p>
