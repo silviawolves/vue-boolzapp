@@ -184,8 +184,7 @@ new Vue({
                 this.utenteCorrente['messages'].push({date: this.getDate(), message: this.newMessage.trim(), status: 'sent'});
             }
 
-            this.rispostaRandom()
-            console.log(this.newMessage)
+            setTimeout(this.rispostaRandom, 1000)
 
             this.newMessage = '';
         },
@@ -193,16 +192,15 @@ new Vue({
             const dataGiusta = new Date()
             return dataGiusta.toLocaleString('it-IT', {day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit'})
         },
-        rispostaRandom(randomReply) {
+        rispostaRandom() {
             this.utenteCorrente['messages'].push({date: this.getDate(), message: this.randomReply, status: 'received'});
-            setTimeout(randomReply, 2000)
         }
     },
 })
 
 
 /*
-Milestone 3
+Milestone 3 X
 - Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde X
-- Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+- Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo. X
 */
