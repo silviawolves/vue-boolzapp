@@ -180,11 +180,15 @@ body {
 }
 
 .messaggio-chat {
-    height: 45px;
-    width: 250px;
+    min-height: 45px;
+    min-width: 250px;
     border-radius: 10px;
     font-size: .8rem;
     margin-bottom: var(--zerofive-margin);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .mittente p:last-of-type, .ricevente p:last-of-type {
@@ -200,6 +204,18 @@ body {
 
 .ricevente {
     background-color: white;
+}
+
+.testo-messaggio {
+    padding: 0 .5rem;
+    margin-bottom: 0;
+}
+
+.orario-messaggio {
+    align-self: flex-end;
+    margin-bottom: .1rem;
+    position: absolute;
+    bottom: 0;
 }
 
 /*LOWBAR*/

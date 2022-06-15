@@ -68,7 +68,7 @@
                         <ul class="list-unstyled mb-0">
                             <li class="d-flex border-top" v-for="(user, i) in arrayContatti" @click="contattoAttivo(user)" :class="{'attivo' : user === utenteCorrente}">
                                 <div class="immagine-utente">
-                                    <img :src="'../img/avatar' + user.avatar + '.jpg'" alt="avatar michele">
+                                    <img :src="`../img/avatar${user.avatar}.jpg`" :alt="`avatar ${user.name}`">
                                 </div>
         
                                 <div class="flex-grow-1">
@@ -113,28 +113,13 @@
 
                         <div class="row flex-column">
 
-                            <div class="col-6"></div>
-                            <div class="col-6 offset-6">
-                                <div class="messaggio-chat mittente float-end">
-                                    <p class="pt-2 ps-2 m-0">Hai portato a spasso il cane?</p>
-                                    <p class="float-end">15:30</p>
+                            <div class="col-12" v-for="(user, i) in utenteCorrente.messages">
+                                <div class="messaggio-chat" :class="{'mittente' : user.status === 'sent', 'ricevente' : user.status === 'received', 'float-end' : user.status === 'sent', 'float-start' : user.status === 'received'}">
+                                    <p class="testo-messaggio">{{user.message}}</p>
+                                    <p class="orario-messaggio">{{user.date}}</p>
                                 </div>
                             </div>
 
-                            <div class="col-6"></div>
-                            <div class="col-6 offset-6">
-                                <div class="messaggio-chat mittente float-end">
-                                    <p class="pt-2 ps-2 m-0">Ricordati di stendere i panni</p>
-                                    <p class="float-end">15:50</p>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="messaggio-chat ricevente">
-                                    <p class="pt-2 ps-2 m-0">Tutto fatto!</p>
-                                    <p class="float-end">16:15</p>
-                                </div>
-                            </div>
                         </div>
 
                     </div>

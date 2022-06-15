@@ -168,7 +168,7 @@ new Vue({
     el: '#app',
     data: {
         arrayContatti: contatti,
-        utenteCorrente: {},
+        utenteCorrente: [{}],
     },
     methods: {
         contattoAttivo(utenteSelezionato){
@@ -182,6 +182,6 @@ new Vue({
 
 /*
 Milestone 2
-- Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
-- Click sul contatto mostra la conversazione del contatto cliccato
+- Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione X
+- Click sul contatto mostra la conversazione del contatto cliccato X
 */
