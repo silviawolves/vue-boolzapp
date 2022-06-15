@@ -168,7 +168,7 @@ new Vue({
     el: '#app',
     data: {
         arrayContatti: contatti,
-        utenteCorrente: [{}],
+        utenteCorrente: contatti[0],
     },
     methods: {
         contattoAttivo(utenteSelezionato){
@@ -177,7 +177,6 @@ new Vue({
         },
     },
 })
-
 
 
 /*

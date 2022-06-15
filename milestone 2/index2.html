@@ -92,11 +92,12 @@
                     <div class="contatto-corrente">
 
                         <div class="immagine">
-                            <img src="../img/avatar_1.jpg" alt="avatar michele" class="avatar">
+                            <img v-if="utenteCorrente === [0]" scr="../img/avatar_1.jpg">
+                            <img v-else :src="`../img/avatar${utenteCorrente.avatar}.jpg`" :alt="`avatar ${utenteCorrente.name}`" class="avatar">
                         </div>
 
                         <div class="flex-grow-1">
-                            <p class="nome-utente m-0"><small>Michele</small></p>
+                            <p class="nome-utente m-0"><small>{{utenteCorrente.name}}</small></p>
                             <p class="messaggio-utente m-0">Ultimo accesso oggi alle 12:00</p>
                         </div>
 
