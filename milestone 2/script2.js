@@ -168,13 +168,12 @@ new Vue({
     el: '#app',
     data: {
         arrayContatti: contatti,
-        utenteCorrente: '',
+        utenteCorrente: {},
     },
     methods: {
         contattoAttivo(utenteSelezionato){
             this.utenteCorrente = utenteSelezionato;
-            console.log(this.contattoAttivo)
-
+            console.log(utenteSelezionato)
         },
     },
 })
