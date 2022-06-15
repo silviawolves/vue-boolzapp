@@ -153,6 +153,10 @@ body {
     margin: var(--zerofive-margin);
 }
 
+.attivo {
+    background-color: #E9EBEB;
+}
+
 /***********************************
 ********* CHAT CONTAINER ***********/
 

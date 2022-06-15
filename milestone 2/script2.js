@@ -168,7 +168,15 @@ new Vue({
     el: '#app',
     data: {
         arrayContatti: contatti,
-    }
+        utenteCorrente: '',
+    },
+    methods: {
+        contattoAttivo(utenteSelezionato){
+            this.utenteCorrente = utenteSelezionato;
+            console.log(this.contattoAttivo)
+
+        },
+    },
 })
 
 
