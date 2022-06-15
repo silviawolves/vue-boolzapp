@@ -171,7 +171,7 @@ new Vue({
         utenteCorrente: contatti[0],
         newMessage: '',
         randomReply: 'Ok.',
-        searchItem: '',
+        searchItem: null,
     },
     methods: {
         contattoAttivo(utenteSelezionato) {
@@ -184,9 +184,7 @@ new Vue({
             } else {
                 this.utenteCorrente['messages'].push({date: this.getDate(), message: this.newMessage.trim(), status: 'sent'});
             }
-
             setTimeout(this.rispostaRandom, 1000)
-
             this.newMessage = '';
         },
         getDate() {
@@ -197,13 +195,17 @@ new Vue({
             this.utenteCorrente['messages'].push({date: this.getDate(), message: this.randomReply, status: 'received'});
         },
         filtroRicerca() {
-            return contatti.filter((element) => {
-                element.name.toLowerCase().split(' ').includes(this.searchItem.toLowerCase())
-                
-                console.log(this.searchItem)
-            })
+            //if (this.searchItem) {
+            return this.arrayContatti.filter((element) => {
+            element.name.toLowerCase().split(" ").includes(this.searchItem.toLowerCase())
+                    
+            console.log(this.searchItem)
+                })
+            //} else {
+            //  return this.arrayContatti
+            }
+
         },
-    },
 })
 
 
