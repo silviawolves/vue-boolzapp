@@ -168,20 +168,34 @@ new Vue({
     el: '#app',
     data: {
         arrayContatti: contatti,
-        utenteCorrente: [{}],
+        utenteCorrente: contatti[0],
+        newMessage: '',
     },
     methods: {
         contattoAttivo(utenteSelezionato){
             this.utenteCorrente = utenteSelezionato;
             console.log(utenteSelezionato.name)
         },
+        keyEnter(){            
+            if (this.newMessage === "") {
+                return;
+            } else {
+                this.utenteCorrente['messages'].push({date: this.getDate(), message: this.newMessage.trim(), status: 'sent'});
+                //this.utenteCorrente['messages'].push({status: 'received'})
+            }
+            console.log(this.newMessage)
+            this.newMessage = '';
+        },
+        getDate(){
+            const dataGiusta = new Date()
+            return dataGiusta.toLocaleString('it-IT', {day: "2-digit", month: "2-digit", year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', useGrouping: 'false'})
+        }
     },
 })
 
 
-
 /*
 Milestone 3
-- Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
+- Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde X
 - Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
 */
