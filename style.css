@@ -47,7 +47,7 @@ body {
 }
 
 .utente, .contatto-corrente, .bar-digitazione {
-    height: 55px;
+    padding: .5rem;
 }
 
 /* AVATAR MITTENTE */
@@ -73,12 +73,11 @@ body {
 
 /* NOTIFICHE */
 .notifiche {
-    height: 65px;
     background-color: var(--light-blue);
     display: flex;
     flex-shrink: 0;
     align-items: center;
-    padding: 0;
+    padding: .8rem 0;
 }
 
 .icona-notifiche i {
@@ -96,11 +95,11 @@ body {
 
 /* RICERCA */
 .ricerca {
-    height: 45px;
     background-color: #FAFAFA;
     flex-shrink: 0;
     display: flex;
     align-items: center;
+    padding: .5rem 0;
 }
 
 .barra-ricerca {
