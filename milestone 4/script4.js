@@ -171,6 +171,7 @@ new Vue({
         utenteCorrente: contatti[0],
         newMessage: '',
         randomReply: 'Ok.',
+        searchItem: '',
     },
     methods: {
         contattoAttivo(utenteSelezionato) {
@@ -194,7 +195,14 @@ new Vue({
         },
         rispostaRandom() {
             this.utenteCorrente['messages'].push({date: this.getDate(), message: this.randomReply, status: 'received'});
-        }
+        },
+        filtroRicerca() {
+            return contatti.filter((element) => {
+                element.name.toLowerCase().split(' ').includes(this.searchItem.toLowerCase())
+                
+                console.log(this.searchItem)
+            })
+        },
     },
 })
 

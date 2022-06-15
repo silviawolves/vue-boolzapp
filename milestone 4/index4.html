@@ -56,8 +56,8 @@
                     <div class="ricerca">
 
                         <div class="input-group input-group-sm px-1 barra-ricerca">
-                            <span class="input-group-text bg-white rounded-0" id="inputGroup-sizing-sm"><i class="fa-solid fa-magnifying-glass px-3"></i></span>
-                            <input type="text" class="form-control rounded-0" placeholder="Cerca o inizia una nuova chat">
+                            <span class="input-group-text bg-white rounded-0" id="inputGroup-sizing-sm" @click="filtroRicerca()"><i class="fa-solid fa-magnifying-glass px-3"></i></span>
+                            <input type="text" class="form-control rounded-0" placeholder="Cerca o inizia una nuova chat" v-model="searchItem">
                         </div>
 
                     </div>
