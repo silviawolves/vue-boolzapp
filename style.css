@@ -193,9 +193,8 @@ body {
 
 .mittente p:last-of-type, .ricevente p:last-of-type {
     font-size: .5rem;
-    opacity: 50%;
+    opacity: 30%;
     margin-right: var(--zerofive-margin);
-    margin-top: .2rem;
 }
 
 .mittente {

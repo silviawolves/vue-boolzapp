@@ -173,7 +173,7 @@ new Vue({
     methods: {
         contattoAttivo(utenteSelezionato){
             this.utenteCorrente = utenteSelezionato;
-            console.log(utenteSelezionato)
+            console.log(utenteSelezionato.name)
         },
     },
 })
