@@ -1,4 +1,5 @@
 'use strict'
+dayjs.extend(dayjs_plugin_customParseFormat)
 
 const contatti = [
     {
@@ -182,17 +183,21 @@ new Vue({
             if (this.newMessage === "") {
                 return;
             } else {
-                this.utenteCorrente['messages'].push({date: this.getDate(), message: this.newMessage.trim(), status: 'sent'});
+                this.utenteCorrente['messages'].push({date: dayjs(new Date()), message: this.newMessage.trim(), status: 'sent'})
             }
-            setTimeout(this.rispostaRandom, 1000)
-            this.newMessage = '';
+            this.newMessage = ''
+
+            const contattoSelezionato = this.utenteCorrente
+
+            setTimeout(() => { 
+                contattoSelezionato['messages'].push({date: dayjs(new Date()), message: this.randomReply, status: 'received'})
+
+                this.pending = null
+            }, 1000)
+            
         },
-        getDate() {
-            const dataGiusta = new Date()
-            return dataGiusta.toLocaleString('it-IT', {day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit'})
-        },
-        rispostaRandom() {
-            this.utenteCorrente['messages'].push({date: this.getDate(), message: this.randomReply, status: 'received'});
+        formatDate(data){
+            return dayjs(data, "DD:MM:YYYY HH:mm:ss").format("HH:mm")
         },
         filtroRicerca() {
             //if (this.searchItem) {

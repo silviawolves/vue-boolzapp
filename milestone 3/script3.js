@@ -171,7 +171,6 @@ new Vue({
         arrayContatti: contatti,
         utenteCorrente: contatti[0],
         newMessage: '',
-        //pending: null,
         randomReply: 'Ok.',
     },
     methods: {
