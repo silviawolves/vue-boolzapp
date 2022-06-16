@@ -58,7 +58,7 @@
                     <div class="ricerca">
 
                         <div class="input-group input-group-sm px-1 barra-ricerca">
-                            <span class="input-group-text bg-white rounded-0" id="inputGroup-sizing-sm" @click="filtroRicerca()"><i class="fa-solid fa-magnifying-glass px-3"></i></span>
+                            <span class="input-group-text bg-white rounded-0" id="inputGroup-sizing-sm"><i class="fa-solid fa-magnifying-glass px-3"></i></span>
                             <input type="text" class="form-control rounded-0" placeholder="Cerca o inizia una nuova chat" v-model="searchItem">
                         </div>
 
@@ -68,7 +68,7 @@
                     <div class="contatti">
 
                         <ul class="list-unstyled mb-0">
-                            <li class="d-flex border-top" v-for="(user, i) in arrayContatti" @click="contattoAttivo(user)" :class="{'attivo' : user === utenteCorrente}">
+                            <li class="d-flex border-top" v-for="user in utentiFiltrati()" @click="contattoAttivo(user)" :class="{'attivo' : user === utenteCorrente}">
                                 <div class="immagine-utente">
                                     <img :src="`../img/avatar${user.avatar}.jpg`" :alt="`avatar ${user.name}`">
                                 </div>

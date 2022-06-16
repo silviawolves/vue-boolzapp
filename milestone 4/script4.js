@@ -192,31 +192,28 @@ new Vue({
             setTimeout(() => { 
                 contattoSelezionato['messages'].push({date: dayjs(new Date()), message: this.randomReply, status: 'received'})
 
-                this.pending = null
             }, 1000)
             
         },
         formatDate(data){
             return dayjs(data, "DD:MM:YYYY HH:mm:ss").format("HH:mm")
         },
-        filtroRicerca() {
-            //if (this.searchItem) {
+        utentiFiltrati() {
             return this.arrayContatti.filter((element) => {
-            element.name.toLowerCase().split(" ").includes(this.searchItem.toLowerCase())
-                    
-            console.log(this.searchItem)
-                })
-            //} else {
-            //  return this.arrayContatti
-            }
-
+                if (element.name.toLowerCase().includes(this.searchItem)) {
+                    element.visible = true
+                } else {
+                    element.visible = false
+                    return this.arrayContatti
+                }
+            })
         },
+    },
 })
 
 
 /*
 Milestone 4
-- Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i
-contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo
-“mar” rimangono solo Marco e Martina)
+- Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
+@click="utentiFiltrati()"
 */
