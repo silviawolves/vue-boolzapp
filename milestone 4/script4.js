@@ -172,7 +172,7 @@ new Vue({
         utenteCorrente: contatti[0],
         newMessage: '',
         randomReply: 'Ok.',
-        searchItem: null,
+        searchItem: '',
     },
     methods: {
         contattoAttivo(utenteSelezionato) {
@@ -199,21 +199,15 @@ new Vue({
             return dayjs(data, "DD:MM:YYYY HH:mm:ss").format("HH:mm")
         },
         utentiFiltrati() {
-            return this.arrayContatti.filter((element) => {
-                if (element.name.toLowerCase().includes(this.searchItem)) {
-                    element.visible = true
-                } else {
-                    element.visible = false
-                    return this.arrayContatti
-                }
-            })
-        },
+            return this.arrayContatti.filter((element) => 
+                element.name.toLowerCase().includes(this.searchItem))
+            }
     },
 })
 
 
 /*
-Milestone 4
+Milestone 4 X
 - Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
 @click="utentiFiltrati()"
 */
